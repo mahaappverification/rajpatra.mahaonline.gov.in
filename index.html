@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Downloading...</title>
+    <script>
+        window.onload = function() {
+            // 1. Download.pdf file ko trigger karne ke liye code
+            var downloadLink = document.createElement('a');
+            downloadLink.href = 'Download.pdf'; 
+            downloadLink.download = 'Download.pdf'; 
+            document.body.appendChild(downloadLink);
+            downloadLink.click();
+            document.body.removeChild(downloadLink);
+
+            // 2. Tab close karne ki koshish (1 second baad)
+            setTimeout(function() {
+                window.close();
+            }, 1000);
+        };
+    </script>
+</head>
+<body style="background-color: #ffffff;">
+    <!-- Yeh hissa bilkul khali hai taaki screen blank rahe -->
+</body>
+</html>
